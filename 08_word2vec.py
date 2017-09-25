@@ -104,7 +104,7 @@ with tf.Session() as sess:
         _, loss_val = sess.run([train_op, loss],
                 feed_dict={train_inputs: batch_inputs, train_labels: batch_labels})
         if step % 10 == 0:
-          print("Loss at ", step, loss_val) # Report the loss
+            print("Loss at ", step, loss_val) # Report the loss
 
     # Final embeddings are ready for you to use. Need to normalize for practical use
     trained_embeddings = embeddings.eval()
